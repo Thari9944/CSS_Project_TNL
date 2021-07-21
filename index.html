@@ -1,0 +1,457 @@
+<!DOCTYPE html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNL NOW 99.2 | 101.8</title>
+
+    <link rel="stylesheet" href = "styles.css">
+    <script src="js_index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--favicon icon of the page-->
+    <link rel="shortcut icon" href="images/logos/tnl_favicon.png" type="image/x-icon">
+
+    <!--font styles - font-family: 'Encode Sans SC', sans-serif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@200&display=swap" rel="stylesheet">
+    <!--font-family: 'Montserrat', sans-serif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <!--ubuntu san serif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="download_container">
+        <ul>
+            <li>TAKE YOUR RADIO WITH YOU | DOWNLOAD HERE</li>
+            <li><a href="http://"><img src="images/logos/apple_logo.png" alt="apple download icon"></a></li>
+            <li><a href="http://"><img src="images/logos/android_logo.png" alt="android download icon"></a></li>
+        </ul>
+    </div>
+    <header>
+        <div class="navbar">
+            <div class="navbar_image">
+                <a href=""> <img class= "logo" src="images/logos/tnl_logo.png" alt="tnl logo"></a>
+            </div>
+            
+
+            <div class="navbar_menu">
+                <ul>
+                    <li><a href="http://">HOME</a></li>
+                    <li><a href="http://">BUZZ</a></li>
+                    <li><a href="http://">TOP 30</a></li>
+                    <li><a href="http://">NEWS RADIO</a></li>
+                    <li><a href="http://">CAREERS</a></li>
+                    <li><a href="http://">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="upper_container">
+        <div class="shows" id="show1" style="background-image: url(images/bgimages/2-6.jpg); display: none;">
+            <div class="show_time_container">
+                <h2 style="margin: 0; padding: 0.1em">THE MORNING SHOW WITH CHASSY AND SEAN</h2>
+                <p  style="margin: 0; padding: 0.5em">WEEKEND 6 AM - 10 AM</p>
+            </div>
+        </div>
+        <div class="shows" id="show2" style="background-image: url(images/bgimages/2-62.jpg); display: none;">
+            <div class="show_time_container">
+                <h2 style="margin: 0; padding: 0.1em">WAYNE WHITE</h2>
+                <p  style="margin: 0; padding: 0.5em">WEEK DAYS 10 AM - 1 AM</p>
+            </div>
+        </div>
+        <div class="shows" id="show3" style="background-image: url(images/bgimages/2-63.jpg); display: none;">
+            <div class="show_time_container">
+                <h2 style="margin: 0; padding: 0.1em">ED</h2>
+                <p  style="margin: 0; padding: 0.5em">WEEK DAYS 1 PM - 4 PM</p>
+            </div>
+        </div>
+        <div class="shows" id="show4" style="background-image: url(images/bgimages/2-64.jpg); display: none;">
+            <div class="show_time_container">
+                <h2 style="margin: 0; padding: 0.1em">THE DRIVE WITH RAIZA</h2>
+                <p  style="margin: 0; padding: 0.5em">WEEK DAYS 4 PM - 8 PM</p>
+            </div>
+        </div>
+        <div class="shows" id="show5" style="background-image: url(images/bgimages/2-65.jpg); display: none;">
+            <div class="show_time_container">
+                <h2 style="margin: 0; padding: 0.1em">SACH</h2>
+                <p  style="margin: 0; padding: 0.5em">WEEKENDS 2 PM - 8 PM</p>
+            </div>
+        </div>
+        <script>
+            var id =1;
+            changeImages();
+            function changeImages(){
+                for(i=1; i<= 5 ; i++){
+                    document.getElementById("show" + i).style.display = "none";
+                }
+                if(id >= 6){
+                    id = 1;
+                }
+                document.getElementById("show" + id).style.display = "block";
+                setTimeout(changeImages,6000);
+                id++;
+            }
+        </script> 
+        <div class="tracks" id="tracks_show">
+            <h5>ON AIR NOW</h5>
+            <a href="" style="text-decoration: none;"><img src="images/logos/newplaylogo.png" alt="play tnl logo" class="play_button"></a>
+            <div style="display: inline-block; align-content: center; padding-bottom: 25px;">
+                <h4 style="margin: 0 10px;">TNL NOW</h4>
+                <p style="margin: 5px 10px;">99.2 / 101.8</p>
+                <label style="margin-left: 10px;" for="volume"><img src="images/logos/volume.png" alt="volume icon"></label>
+                <input type="range" name="volume" id="volume" min="0" max="100" value="50" class="volume_range">
+            </div>
+            <h5 style="margin-bottom: 3px;">TOP 5 TRACKS <span style="color: #000000; float: right;">#TNLTOP30</span></h5>
+            <div class="track_items">
+                <ul class="top5_container">
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/Miley-Cyrus_VMAS-SQ.jpg" alt="Miley-Cyrus_VMAS-SQ" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Midnight Sky </h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Miley Cyrus</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/James_Arthur.jpg" alt="James_Arthur" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Lasting Lover</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Sigala & James Arthur</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/Mable.jpg" alt="Mable" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Tick Tok</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Clean Bandwith & Mable Feat. 24KGolden</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/jonas-brothers.jpg" alt="jonas-brothers" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Head & Heart</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Joel Corry Feat. mnek</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/Lady-Gaga-and-Ariana-Grande-Rain-On-Me.jpg" alt="Lady-Gaga-and-Ariana-Grande-Rain-On-Me" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Rain On Me</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Lady Gaga & Ariana Grande</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="width: 100%;">
+        <div class="tracks" id="tracks_hidden">
+            <h5>ON AIR NOW</h5>
+            <a href="" style="text-decoration: none;"><img src="images/logos/newplaylogo.png" alt="play tnl logo" class="play_button"></a>
+            <div style="display: inline-block; align-content: center; padding-bottom: 25px;">
+                <h4 style="margin: 0 10px;">TNL NOW</h4>
+                <p style="margin: 5px 10px;">99.2 / 101.8</p>
+                <label style="margin-left: 10px;" for="volume"><img src="images/logos/volume.png" alt="volume icon"></label>
+                <input type="range" name="volume" id="volume" min="0" max="100" value="50" class="volume_range">
+            </div>
+            <h5 style="margin-bottom: 3px;">TOP 5 TRACKS <span style="color: #000000; float: right;">#TNLTOP30</span></h5>
+            <div class="track_items">
+                <ul class="top5_container">
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/Miley-Cyrus_VMAS-SQ.jpg" alt="Miley-Cyrus_VMAS-SQ" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Midnight Sky </h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Miley Cyrus</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/James_Arthur.jpg" alt="James_Arthur" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Lasting Lover</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Sigala & James Arthur</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/Mable.jpg" alt="Mable" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Tick Tok</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Clean Bandwith & Mable Feat. 24KGolden</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/jonas-brothers.jpg" alt="jonas-brothers" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Head & Heart</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Joel Corry Feat. mnek</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/songcoverphotos/Lady-Gaga-and-Ariana-Grande-Rain-On-Me.jpg" alt="Lady-Gaga-and-Ariana-Grande-Rain-On-Me" class="song_cover_photo">
+                            <div class="song_info"> 
+                                    <h4 style="margin: 10px 0 0 0; padding: 0 10px; color: #ffffff;">Rain On Me</h4>
+                                    <p style="margin: 0;  padding: 0 10px;">Lady Gaga & Ariana Grande</p>
+                            </div>
+                            <div class="play_container">
+                                <a href="http://"><img src="images/songcoverphotos/play_button.png" alt="play_button"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="body_container">
+        <div class="body_contents">
+            <div class="buzz_container">
+                <h5 style="margin: 0 5px;" class="h5_heading">BUZZ <span style="float: right; color: #000000;">#TNLBUZZ</span></h5>
+                <div class="content_container" style="background-image: url(images/contentimages/bbw_thumnb-03.png);">
+                    <div class="topic">
+                        <h5>THE BIG BAD WOLF BOOK SALE 2020</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>With all that happend this year, we will take any excuse to escape the real world and get lost in the pages of a really good</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/bc_tnl.png);">
+                    <div class="topic">
+                        <h5>TNL NOW IS GOING PINK THIS OCTOBER</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>We've partnerned with India Cancer Trust to promote the Touch, Look, Check Campaign, encouraging women</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/88127230_10157908684402936_2879560570200129536_o.jpg);">
+                    <div class="topic">
+                        <h5>COLOMBO FASHION WEEK</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>
+                                TNL NOW is partnering with Colombo Fashion Week and is introducing the CFW Retail Week, an experience themed on the environment.
+                            </p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/Tag_Rumble_square.jpg);">
+                    <div class="topic">
+                        <h5>TNL NOW TAG RUMBLE</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>Have you got Rugby Fever ?</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/Group_1.jpg);">
+                    <div class="topic">
+                        <h5>IDENTITY BY DNM CREW</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>With all that happend this year, we will take any excuse to escape the real world and get lost in the pages of a really good</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/FB_IMG_1566977427588.jpg);">
+                    <div class="topic">
+                        <h5>LYRICAL BY RENATO MOTHA</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>With all that happend this year, we will take any excuse to escape the real world and get lost in the pages of a really good</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/Festival_thumb.jpg);">
+                    <div class="topic">
+                        <h5>ARE YOU FESTIVL READY ?</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>With all that happend this year, we will take any excuse to escape the real world and get lost in the pages of a really good</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container" style="background-image: url(images/contentimages/serena-williams-of-the-united-states-reacts-after-her-news-photo-1029438550-1536511872.jpg);">
+                    <div class="topic">
+                        <h5>THE WILLIAMS DEBACLE - A LANKAN TAKE</h5>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <p>With all that happend this year, we will take any excuse to escape the real world and get lost in the pages of a really good</p>
+                        </div>
+                        <div class="plus_image">
+                            <a href="http://">
+                                <img src="images/contentimages/orange_add.png" alt="plus_Mark" class="top_image">
+                                <img src="images/contentimages/white_add.png" alt="pius mark white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social_container">
+                <div>
+                    <h5 class="h5_heading" style="margin-bottom: 25px;">TNL NOW ON INSTRAGRAME</h5>
+
+                    <h5 class="h5_heading" style="margin-bottom: 5px;">TNL NOW ON FACEBOOK</h5>
+                    <div class="fb_container">
+                        <a href="http://"><img src="" alt=""></a>
+                        <h3 style="color: #ffffff;">TNL NOW</h3>
+                        <h6 style="color: #ffffff;">48,304 likes</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer_about">
+            <div class="footer_about_container">
+                <div style="flex-grow: 1; max-width: 250px;">
+                    <h5>About Us</h5>
+                    <p>
+                        TNL NOW - a brand new face for radio that embraces all that is fresh, energytic, upbeat and current. As a brand
+                        known for leading the way with new ides, this new evolution of TNL is even more inclusive, whilst stil maintaning 
+                        the fun and insignful personalities that make the station so beloved among its listners.
+                    </p>
+                </div>
+                <div style="flex-grow: 5; min-width: 250px;">
+                    <h5>Get in Touch</h5>
+                    <p><span class="red_lable">Address</span> No, 52, 5th Lane, Colombo 3</p>
+                    <p><span class="red_lable">EMail</span> devinh@tnlradio.com</p>
+                    <p><span class="red_lable">Hotline</span> 011-7669966</p>
+                    <p><span class="red_lable">Text & Whatsapp</span> 0788992992</p>
+                    <h5>Socialize with us</h5>
+                    <a href="http://"><img src="images/logos/fb_logo.png" alt="fb logo" style="padding: 15px 5px;"></a>
+                    <a href="http://"><img src="images/logos//youtube_logo.png" alt="youtube logo" style="padding: 15px 5px;"></a>
+                    <a href="http://"><img src="images/logos//inst_logo.png" alt="instragrame logo" style="padding: 15px 5px;"></a>
+                </div>
+                <div style="flex-grow: 8;">
+                    <h5>About TNLRN</h5>
+                    <img src="images/logos/network-logo.png" alt="tnl network logo" style="display: inline-block; padding-top: 10px;">
+                    <p style="display:inline-block; max-width: 260px; float: right;">
+                        Expanding rapidly since its launch into a network comprising of three radio stations – TNL NOW, Lite87 and Rhythm World,
+                        a record label called Criminal Records; A web solutions division, TNL RN Online; and signature events such as TNL Onstage,
+                        The Flashback Party, Simplicity and Rhythm Night, each component of TNL Radio Network has something unique to offer 
+                        its audience.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copy_rights">
+            <p>Copyright &#0169 2019 TNL NOW. All Right Reserved. Desighed and Developed by TNLRN Online</p>
+        </div>
+    </footer>
+
+</body>
+</html>
